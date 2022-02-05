@@ -35,7 +35,7 @@ const Header = () => {
     <AppBar>
       <Toolbar className={classes.toolBarContainer}>
         <div className={classes.avatarContainer}>
-          <Avatar sx={{width: 54, height: 54}} alt="Remy Sharp" src="https://imgur.com/user/liayabbay/avatar"/>
+          <Avatar onClick={() => history.push('/user')} sx={{width: 54, height: 54}} alt="Remy Sharp" src="https://imgur.com/user/liayabbay/avatar"/>
             <PageSettingsButton handleClick={handleClick} handleClose={handleClose} anchorEl={anchorEl} open={open}/>
         </div>
         <Button onClick={() => { history.push('/') }}> Home </Button>
