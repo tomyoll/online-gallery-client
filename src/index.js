@@ -4,13 +4,13 @@ import './index.css';
 import App from './App';
 import Context from './Context'
 import UserStore from "./store/UserStore";
-import UtilsStore from "./store/UtilsStore";
+import UtilsStore from "./store/ImagesStore";
 
 ReactDOM.render(
   <React.StrictMode>
     <Context.Provider value={{
       user: new UserStore(),
-      utils: new UtilsStore(),
+      images: new UtilsStore(),
     }}>
       <App/>
     </Context.Provider>

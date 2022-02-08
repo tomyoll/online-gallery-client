@@ -132,9 +132,7 @@ const Auth = ({ onUserNameChange, onEmailChange, onPasswordChange, onSignInSubmi
                 <Grid item xs>
                   <Link
                     className={classes.link}
-                    onClick={() => {
-                      setIsLogin(!isLogin);
-                    }}
+                    onClick={() => { setIsLogin(!isLogin) }}
                   >
                     {isLogin ? 'Don`t have an account? Registration' : 'Already have account? Log in'}
                   </Link>

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Auth from "../components/Auth";
+import register from "../api/User";
 
 const AuthPage = () => {
   const [email, setEmail] = useState('');
@@ -9,10 +10,13 @@ const AuthPage = () => {
   const onUserNameChange = (e) => { setUserName(e.target.value) }
   const onEmailChange = (e) => { setEmail(e.target.value) }
   const onPasswordChange = (e) => { setPassword(e.target.value) }
-  const onSignInSubmit = (e) => {
+
+  const onSignInSubmit = async (e) => {
     e.preventDefault();
-    console.log('email: ' + email + ', password: ' + password);
+    const registerResponse = await register(email, password, userName);
+    console.log(registerResponse);
   }
+
   return (
     <Auth
       onUserNameChange={onUserNameChange}
